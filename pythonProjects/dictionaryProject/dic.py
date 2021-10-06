@@ -10,7 +10,7 @@ def addWord(word,w, description):
     print(word)
 
 def lookExist(word, w):
-    if w.lower() in  word:
+    if w in  word:
         print(word[w])
     else:
         description = input("Ingrese su descripción: ")
@@ -18,7 +18,7 @@ def lookExist(word, w):
 
 def executor():
     w = input("Ingrese la palabra que quiere almacenar: ")
-    lookExist(word, w)
+    lookExist(word, w.lower())
 
 executor()                
                 
