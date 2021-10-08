@@ -16,9 +16,16 @@ def lookExist(word, w):
         description = input("Ingrese su descripción: ")
         addWord(word, w, description)
 
-def executor():
-    w = input("Ingrese la palabra que quiere almacenar: ")
-    lookExist(word, w.lower())
 
+def writting(word):
+    f = open ('holamundo.txt','w')
+    f.write(str(word))
+    f.close()
+    
+def executor():
+    while True:
+        w = input("Ingrese la palabra que quiere almacenar: ")
+        lookExist(word, w.lower())
+        writting(word)
 executor()                
                 
